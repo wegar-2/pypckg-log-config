@@ -47,15 +47,4 @@ def configure_logging():
     logger.addHandler(console_handler)
 
 
-# Create a console handler
-console_handler = logging.StreamHandler()
-
-# Create and set the colored formatter
-formatter = ColoredFormatter(
-    '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-console_handler.setFormatter(formatter)
-
-# Get the root logger and configure it
-logger = logging.getLogger()
-logger.setLevel(logging.DEBUG)  # Set the logging level globally
-logger.addHandler(console_handler)
+configure_logging()
